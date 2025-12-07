@@ -11,7 +11,7 @@ const steps = [
     icon: FileSpreadsheet,
     step: "02",
     title: "Connect Your Business Details",
-    description: "Securely upload 3 months of business bank statements."
+    description: "Provide essential business details so we can verify and match you with the best funding options."
   },
   {
     icon: CheckCircle2,
