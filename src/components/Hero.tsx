@@ -50,7 +50,7 @@ const Hero = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 animate-fade-up-delay-3">
           {[
-            { value: "$2B+", label: "Funded to Date" },
+            { value: "$200M", label: "Funded to Date" },
             { value: "24hrs", label: "Average Funding Time" },
             { value: "95%", label: "Approval Rate" },
             { value: "10K+", label: "Happy Clients" },
