@@ -16,11 +16,11 @@ const ProductCard = ({ icon: Icon, title, description, delay = 0 }: ProductCardP
       style={{ animationDelay: `${delay}ms` }}
     >
       {/* Gradient overlay on hover */}
-      <div className="absolute inset-0 gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+      <div className="absolute inset-0 gradient-accent opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
       
       {/* Icon container */}
-      <div className="relative w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-        <Icon className="w-7 h-7 text-primary-foreground" />
+      <div className="relative w-14 h-14 rounded-xl gradient-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+        <Icon className="w-7 h-7 text-accent-foreground" />
       </div>
 
       {/* Content */}
@@ -32,13 +32,13 @@ const ProductCard = ({ icon: Icon, title, description, delay = 0 }: ProductCardP
       </p>
 
       {/* CTA */}
-      <Button variant="ghost" className="p-0 h-auto text-primary font-semibold group/btn">
+      <Button variant="ghost" className="p-0 h-auto text-secondary font-semibold group/btn">
         Learn More
         <ArrowRight className="w-4 h-4 ml-1 transition-transform duration-300 group-hover/btn:translate-x-1" />
       </Button>
 
       {/* Corner accent */}
-      <div className="absolute top-0 right-0 w-24 h-24 gradient-primary opacity-0 group-hover:opacity-10 rounded-bl-[100px] transition-opacity duration-500" />
+      <div className="absolute top-0 right-0 w-24 h-24 gradient-cta opacity-0 group-hover:opacity-10 rounded-bl-[100px] transition-opacity duration-500" />
     </div>
   );
 };
