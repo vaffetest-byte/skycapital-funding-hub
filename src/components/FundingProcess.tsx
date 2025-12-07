@@ -10,7 +10,7 @@ const steps = [
   {
     icon: FileSpreadsheet,
     step: "02",
-    title: "Share Bank Statements",
+    title: "Connect Your Business Details",
     description: "Securely upload 3 months of business bank statements."
   },
   {
