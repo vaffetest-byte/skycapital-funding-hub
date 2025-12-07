@@ -32,17 +32,17 @@ const FundingProcess = () => {
     <section className="py-24 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container px-4 md:px-8 relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
+          <span className="inline-block px-4 py-2 bg-accent/20 text-accent-foreground rounded-full text-sm font-semibold mb-4">
             Simple Process
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Get Funded in <span className="text-secondary">4 Easy Steps</span>
+            Get Funded in <span className="text-accent">4 Easy Steps</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our streamlined process gets you from application to funding faster than anyone else in the industry.
@@ -52,7 +52,7 @@ const FundingProcess = () => {
         {/* Steps */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {/* Connecting line */}
-          <div className="hidden lg:block absolute top-20 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary via-accent to-secondary" />
+          <div className="hidden lg:block absolute top-20 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary via-secondary to-accent" />
 
           {steps.map((step, index) => (
             <div key={step.title} className="relative group">
@@ -63,7 +63,7 @@ const FundingProcess = () => {
                   <div className="w-20 h-20 rounded-2xl gradient-primary flex items-center justify-center shadow-elevated group-hover:scale-110 transition-transform duration-300">
                     <step.icon className="w-10 h-10 text-primary-foreground" />
                   </div>
-                  <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full gradient-cta flex items-center justify-center text-sm font-bold text-white shadow-cta">
+                  <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full gradient-accent flex items-center justify-center text-sm font-bold text-accent-foreground shadow-accent">
                     {step.step}
                   </span>
                 </div>

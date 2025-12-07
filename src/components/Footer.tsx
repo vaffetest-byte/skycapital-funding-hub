@@ -16,7 +16,7 @@ const Footer = () => {
                 Apply now and get funded in as little as 24 hours.
               </p>
             </div>
-            <Button variant="cta" size="xl">
+            <Button variant="accent" size="xl">
               Apply Now
               <ArrowRight className="w-5 h-5" />
             </Button>
@@ -38,7 +38,7 @@ const Footer = () => {
                 <a 
                   key={index}
                   href="#" 
-                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-secondary/80 transition-colors duration-300"
+                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
                 >
                   <Icon className="w-5 h-5" />
                 </a>
@@ -93,15 +93,15 @@ const Footer = () => {
             <h5 className="font-bold mb-4">Contact Us</h5>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-secondary" />
+                <Phone className="w-5 h-5 text-accent" />
                 <span className="text-primary-foreground/70">(888) 555-FUND</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-secondary" />
+                <Mail className="w-5 h-5 text-accent" />
                 <span className="text-primary-foreground/70">hello@skycapital.com</span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-secondary shrink-0" />
+                <MapPin className="w-5 h-5 text-accent shrink-0" />
                 <span className="text-primary-foreground/70">
                   100 Financial Plaza, Suite 500<br />
                   New York, NY 10001

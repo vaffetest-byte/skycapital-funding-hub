@@ -35,17 +35,17 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-24 bg-muted">
+    <section className="py-24 bg-muted/50">
       <div className="container px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div>
-            <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
               Why SkyCapital
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Built for Businesses That{" "}
-              <span className="text-gradient-green">Move Fast</span>
+              <span className="text-gradient">Move Fast</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               We've funded over $2 billion to businesses nationwide. Our streamlined process and expert team ensure you get the capital you need, when you need it.
@@ -75,8 +75,8 @@ const WhyChooseUs = () => {
                 key={feature.title}
                 className="group bg-card rounded-xl p-6 shadow-soft hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border/50"
               >
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors duration-300">
-                  <feature.icon className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                  <feature.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-bold text-foreground mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">{feature.description}</p>

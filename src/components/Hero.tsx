@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield } from "lucide-react";
+import { ArrowRight, Shield, Zap, TrendingUp } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="relative min-h-[90vh] gradient-hero overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/5 rounded-full blur-3xl" />
       </div>
 
       {/* Grid pattern overlay */}
@@ -20,7 +20,7 @@ const Hero = () => {
         {/* Trust badge */}
         <div className="flex justify-center mb-8 animate-fade-up">
           <div className="glass-dark px-4 py-2 rounded-full flex items-center gap-2">
-            <Shield className="w-4 h-4 text-secondary" />
+            <Shield className="w-4 h-4 text-accent" />
             <span className="text-sm text-white/90">Trusted by 10,000+ Businesses Nationwide</span>
           </div>
         </div>
@@ -28,7 +28,7 @@ const Hero = () => {
         {/* Main heading */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white max-w-5xl mx-auto leading-tight animate-fade-up-delay-1">
           Flexible Funding Solutions for{" "}
-          <span className="text-secondary">Every Business Need</span>
+          <span className="text-accent">Every Business Need</span>
         </h1>
 
         {/* Subtitle */}
@@ -56,7 +56,7 @@ const Hero = () => {
             { value: "10K+", label: "Happy Clients" },
           ].map((stat, index) => (
             <div key={index} className="text-center glass-dark rounded-2xl p-6">
-              <div className="text-3xl md:text-4xl font-bold text-secondary">{stat.value}</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent">{stat.value}</div>
               <div className="text-sm text-white/70 mt-1">{stat.label}</div>
             </div>
           ))}
@@ -66,7 +66,7 @@ const Hero = () => {
       {/* Bottom wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-          <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="hsl(0 0% 100%)"/>
+          <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="hsl(210 40% 98%)"/>
         </svg>
       </div>
     </section>
