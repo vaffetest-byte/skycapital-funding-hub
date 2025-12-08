@@ -1,6 +1,4 @@
 import { LucideIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 interface ProductCardProps {
   icon: LucideIcon;
@@ -27,15 +25,9 @@ const ProductCard = ({ icon: Icon, title, description, delay = 0 }: ProductCardP
       <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
         {title}
       </h3>
-      <p className="text-muted-foreground leading-relaxed mb-6">
+      <p className="text-muted-foreground leading-relaxed">
         {description}
       </p>
-
-      {/* CTA */}
-      <Button variant="ghost" className="p-0 h-auto text-primary font-semibold group/btn">
-        Learn More
-        <ArrowRight className="w-4 h-4 ml-1 transition-transform duration-300 group-hover/btn:translate-x-1" />
-      </Button>
 
       {/* Corner accent */}
       <div className="absolute top-0 right-0 w-24 h-24 gradient-primary opacity-0 group-hover:opacity-10 rounded-bl-[100px] transition-opacity duration-500" />
