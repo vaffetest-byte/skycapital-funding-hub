@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TrustBadges from "@/components/TrustBadges";
 import ProductsGrid from "@/components/ProductsGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import FundingProcess from "@/components/FundingProcess";
@@ -11,6 +12,7 @@ const Index = () => {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <TrustBadges />
       <section id="products">
         <ProductsGrid />
       </section>
