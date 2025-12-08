@@ -35,9 +35,9 @@ const Hero = () => {
           <span className="text-accent">Grow Your Business</span>
         </h1>
 
-        {/* SEO Subtitle with keywords: MCA, working capital, small business loans */}
+        {/* SEO Subtitle with keywords: MCA, working capital, small business loans, NY & FL */}
         <p className="mt-6 text-lg md:text-xl text-white/80 text-center max-w-3xl mx-auto animate-fade-up-delay-2">
-          SkyCapital provides <strong>MCA funding</strong>, <strong>working capital loans</strong>, and <strong>small business loans</strong> for NY & FL businesses. 
+          <strong className="text-accent">New York & Florida's</strong> trusted source for <strong>MCA funding</strong>, <strong>working capital loans</strong>, and <strong>small business loans</strong>. 
           Get <strong>fast approval</strong> and funding in as little as 24 hours with a 95% approval rate.
         </p>
 
