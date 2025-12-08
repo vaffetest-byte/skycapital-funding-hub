@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Zap, TrendingUp } from "lucide-react";
+import { ArrowRight, Shield, Phone } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -44,8 +44,11 @@ const Hero = () => {
               <ArrowRight className="w-5 h-5" />
             </a>
           </Button>
-          <Button variant="heroOutline" size="xl">
-            Speak to a SkyCapital Advisor
+          <Button variant="heroOutline" size="xl" asChild>
+            <a href="tel:5165230489">
+              <Phone className="w-5 h-5" />
+              Speak to a SkyCapital Advisor
+            </a>
           </Button>
         </div>
 
