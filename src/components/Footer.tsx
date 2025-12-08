@@ -109,8 +109,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0" />
                 <span className="text-primary-foreground/70">
-                  100 Financial Plaza, Suite 500<br />
-                  New York, NY 10001
+                  Florida & New York
                 </span>
               </li>
             </ul>
