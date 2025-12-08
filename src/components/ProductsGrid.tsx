@@ -34,7 +34,7 @@ const products = [
     icon: Truck,
     title: "Equipment Financing",
     description: "Equipment financing for your business. Upgrade machinery without draining cash reserves.",
-    featured: false
+    featured: true
   },
   {
     icon: FileText,
