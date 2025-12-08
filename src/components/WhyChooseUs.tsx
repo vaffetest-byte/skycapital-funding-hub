@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
               <span className="text-gradient">Move Fast</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We've funded over $2 billion to businesses nationwide. Our streamlined process and expert team ensure you get the capital you need, when you need it.
+              We've funded over $200 Million to businesses nationwide. Our streamlined process and expert team ensure you get the capital you need, when you need it.
             </p>
 
             {/* CTA stats */}
