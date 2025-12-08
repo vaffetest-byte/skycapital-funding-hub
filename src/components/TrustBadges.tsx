@@ -7,8 +7,8 @@ const TrustBadges = () => {
 
   const trustIndicators = [
     { icon: Shield, label: "SSL Secured", description: "256-bit encryption", color: "from-blue-500 to-blue-600" },
-    { icon: CheckCircle2, label: "BBB Accredited", description: "A+ Rating", color: "from-emerald-500 to-emerald-600" },
-    { icon: Lock, label: "Bank-Level Security", description: "SOC 2 Compliant", color: "from-indigo-500 to-indigo-600" },
+    { icon: CheckCircle2, label: "Fast Approval", description: "24-48 Hours", color: "from-emerald-500 to-emerald-600" },
+    { icon: Lock, label: "Data Protected", description: "100% Secure", color: "from-indigo-500 to-indigo-600" },
     { icon: Award, label: "Top Rated", description: "4.9/5 Stars", color: "from-amber-500 to-amber-600" },
   ];
 
