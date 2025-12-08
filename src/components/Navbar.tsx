@@ -83,8 +83,8 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:5165230489" className="flex items-center gap-2 text-white/80 hover:text-white transition-all duration-300 hover:scale-105 animate-pulse">
-              <Phone className="w-4 h-4 animate-bounce" />
+            <a href="tel:5165230489" className="flex items-center gap-2 text-white hover:text-accent transition-all duration-500 hover:scale-105 group">
+              <Phone className="w-4 h-4 animate-[pulse_3s_ease-in-out_infinite] group-hover:text-accent" />
               <span className="font-medium">(516)-523-0489</span>
             </a>
             <Button variant="accent" size="default" className="animate-pulse-glow" asChild>
