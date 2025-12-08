@@ -6,25 +6,25 @@ const steps = [
     icon: FileEdit,
     step: "01",
     title: "Apply Online",
-    description: "Complete our simple 5-minute application for business funding. No paperwork hassles for NY & FL businesses."
+    description: "Complete our simple 5-minute application for business funding. No paperwork hassles."
   },
   {
     icon: FileSpreadsheet,
     step: "02",
     title: "Quick Verification",
-    description: "Share your business details for fast approval. We verify New York and Florida businesses same-day."
+    description: "Share your business details for fast approval. We verify businesses same-day."
   },
   {
     icon: CheckCircle2,
     step: "03",
     title: "Get Approved",
-    description: "Receive multiple funding offers tailored to your NY or FL business. 95% approval rate."
+    description: "Receive multiple funding offers tailored to your business. 95% approval rate."
   },
   {
     icon: Wallet,
     step: "04",
     title: "Receive Funds",
-    description: "Get funded in 24-48 hours directly to your account. Fast business funding for NY & Florida."
+    description: "Get funded in 24-48 hours directly to your account. Fast business funding nationwide."
   }
 ];
 
@@ -36,7 +36,7 @@ const FundingProcess = () => {
     <section 
       id="process" 
       className="py-24 bg-background relative overflow-hidden"
-      aria-label="How to Get Business Funding in New York and Florida"
+      aria-label="How to Get Business Funding"
     >
       {/* Background decoration */}
       <div className="absolute inset-0">
@@ -53,10 +53,10 @@ const FundingProcess = () => {
             Fast Approval Process
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Get <span className="text-accent">Fast Business Funding</span> in 4 Easy Steps
+            Get Fast Business Funding in 4 Easy Steps
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our streamlined <strong>fast approval business funding</strong> process gets New York and Florida businesses 
+            Our streamlined <strong>fast approval business funding</strong> process gets your business 
             from application to funding faster than traditional banks.
           </p>
         </div>
