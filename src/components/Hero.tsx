@@ -45,7 +45,7 @@ const Hero = () => {
             </a>
           </Button>
           <Button variant="heroOutline" size="xl">
-            Book Consultation
+            Speak to a SkyCapital Advisor
           </Button>
         </div>
 
