@@ -286,3 +286,16 @@ html {
     background-position: -200% 0;
   }
 }
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 20px -4px hsl(43 96% 56% / 0.4), 0 0 0 0 hsl(43 96% 56% / 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px -4px hsl(43 96% 56% / 0.6), 0 0 20px 4px hsl(43 96% 56% / 0.3);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
