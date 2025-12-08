@@ -4,11 +4,11 @@ import skycapitalLogo from "@/assets/skycapital-logo.png";
 
 const Footer = () => {
   const serviceAreas = [
-    { name: "Business Funding NYC", href: "#products" },
-    { name: "Business Loans Brooklyn", href: "#products" },
-    { name: "MCA Funding Miami", href: "#products" },
-    { name: "Working Capital Orlando", href: "#products" },
-    { name: "Small Business Loans Tampa", href: "#products" }
+    { name: "Business Funding USA", href: "#products" },
+    { name: "Small Business Loans", href: "#products" },
+    { name: "MCA Funding Nationwide", href: "#products" },
+    { name: "Working Capital Loans", href: "#products" },
+    { name: "Fast Business Funding", href: "#products" }
   ];
 
   const fundingProducts = [
@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                Ready to Get Business Funding in New York or Florida?
+                Ready to Get the Business Funding You Need?
               </h3>
               <p className="text-primary-foreground/80">
                 Apply now for fast approval MCA and working capital loans. Get funded in as little as 24 hours.
@@ -39,7 +39,7 @@ const Footer = () => {
                 href="https://forms.zoho.com/skycapnow1/form/TimetoDriveYourBusinessForwardAreYouIn" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                aria-label="Apply for business funding in New York and Florida"
+                aria-label="Apply for business funding"
               >
                 Apply Now
                 <ArrowRight className="w-5 h-5" aria-hidden="true" />
@@ -56,11 +56,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <img 
               src={skycapitalLogo} 
-              alt="SkyCapital - Business Funding Provider New York and Florida" 
+              alt="SkyCapital - Nationwide Business Funding Provider" 
               className="h-36 md:h-44 w-auto brightness-0 invert mb-4"
             />
             <p className="text-primary-foreground/70 mb-6">
-              SkyCapital is a trusted business funding provider serving <strong>New York</strong> and <strong>Florida</strong> since 2015. 
+              SkyCapital is a trusted nationwide business funding provider serving businesses across <strong>all 50 states</strong> since 2015. 
               We offer MCA, working capital loans, and small business financing with fast approval.
             </p>
             <div className="flex gap-4">
@@ -99,9 +99,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Service Areas - Local SEO */}
+          {/* Service Areas */}
           <div>
-            <h4 className="font-bold mb-4">Service Areas</h4>
+            <h4 className="font-bold mb-4">Why Choose Us</h4>
             <ul className="space-y-3">
               {serviceAreas.map((item) => (
                 <li key={item.name}>
@@ -115,7 +115,7 @@ const Footer = () => {
               ))}
             </ul>
             <p className="text-primary-foreground/50 text-sm mt-4">
-              Also serving: Manhattan, Queens, Long Island, Buffalo, Albany, Jacksonville, Fort Lauderdale
+              Serving businesses in all 50 states
             </p>
           </div>
 
@@ -152,7 +152,7 @@ const Footer = () => {
                   <MapPin className="w-6 h-6 text-accent" aria-hidden="true" />
                 </span>
                 <span className="text-primary-foreground/70">
-                  New York & Florida
+                  Nationwide Coverage
                 </span>
               </li>
             </ul>
@@ -164,7 +164,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container px-4 md:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/60">
-            <p>© 2024 SkyCapital - Business Funding New York & Florida. All rights reserved.</p>
+            <p>© 2024 SkyCapital - Nationwide Business Funding. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-primary-foreground transition-colors duration-300">Privacy Policy</a>
               <a href="#" className="hover:text-primary-foreground transition-colors duration-300">Terms of Service</a>
@@ -173,8 +173,7 @@ const Footer = () => {
           </div>
           <p className="text-xs text-primary-foreground/40 mt-4 text-center md:text-left">
             SkyCapital is a licensed financial services company providing business funding, MCA, and working capital loans to small businesses 
-            in New York (NYC, Brooklyn, Manhattan, Queens, Long Island, Buffalo, Albany) and Florida (Miami, Orlando, Tampa, Jacksonville, Fort Lauderdale). 
-            Funding products are subject to credit approval. Terms and conditions apply. This is not an offer to lend. Contact us for complete details.
+            across all 50 states. Funding products are subject to credit approval. Terms and conditions apply. This is not an offer to lend. Contact us for complete details.
           </p>
         </div>
       </div>
