@@ -9,9 +9,14 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ icon: Icon, title, description, delay = 0, featured = false }: ProductCardProps) => {
+  const applicationUrl = "https://forms.zohopublic.com/skycapnow1/form/BusinessApplication/formperma/k4ySefBCGaIjXzTbs58TKi9KHTcjBurx7BVBYrs0buI";
+
   return (
-    <div 
-      className={`group relative rounded-2xl p-8 transition-all duration-500 hover:-translate-y-3 overflow-hidden cursor-pointer ${
+    <a 
+      href={applicationUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`group relative rounded-2xl p-8 transition-all duration-500 hover:-translate-y-3 overflow-hidden cursor-pointer block ${
         featured 
           ? "bg-gradient-to-br from-primary to-secondary text-primary-foreground shadow-elevated" 
           : "bg-card shadow-soft hover:shadow-elevated border border-border/50"
@@ -59,10 +64,10 @@ const ProductCard = ({ icon: Icon, title, description, delay = 0, featured = fal
           ? "text-white/90 group-hover:text-white" 
           : "text-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0"
       }`}>
-        <span>Learn More</span>
+        <span>Apply Now</span>
         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
       </div>
-    </div>
+    </a>
   );
 };
 
