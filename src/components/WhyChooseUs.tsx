@@ -55,8 +55,8 @@ const WhyChooseUs = () => {
               Trusted Business Funding Provider
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Why NY & FL Businesses{" "}
-              <span className="text-gradient">Choose SkyCapital</span>
+              Your Partner in{" "}
+              <span className="text-gradient">Business Growth</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               We&apos;ve funded over <strong>$200 Million</strong> to businesses across <strong>New York</strong> and <strong>Florida</strong>. 
