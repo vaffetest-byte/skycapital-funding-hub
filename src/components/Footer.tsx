@@ -16,9 +16,11 @@ const Footer = () => {
                 Apply now and get funded in as little as 24 hours.
               </p>
             </div>
-            <Button variant="accent" size="xl">
-              Apply Now
-              <ArrowRight className="w-5 h-5" />
+            <Button variant="accent" size="xl" asChild>
+              <a href="https://forms.zohopublic.com/skycapnow1/form/BusinessApplication/formperma/k4ySefBCGaIjXzTbs58TKi9KHTcjBurx7BVBYrs0buI" target="_blank" rel="noopener noreferrer">
+                Apply Now
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </Button>
           </div>
         </div>
