@@ -48,7 +48,7 @@ const TrustBadges = () => {
             Why Trust Us
           </span>
           <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-            Security & Credibility You Can <span className="text-gradient">Count On</span>
+            Security & Credibility You Can Always Rely On
           </h2>
         </div>
 
