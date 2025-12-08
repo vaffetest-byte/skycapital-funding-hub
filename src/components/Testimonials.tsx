@@ -1,4 +1,5 @@
 import { Star, Quote } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   {
@@ -25,8 +26,11 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section className="py-24 gradient-hero relative overflow-hidden">
+    <section id="testimonials" className="py-24 gradient-hero relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" />
@@ -35,7 +39,10 @@ const Testimonials = () => {
 
       <div className="container px-4 md:px-8 relative z-10">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 scroll-reveal ${headerVisible ? 'visible' : ''}`}
+        >
           <span className="inline-block px-4 py-2 bg-white/10 text-white rounded-full text-sm font-semibold mb-4">
             Success Stories
           </span>
@@ -48,11 +55,11 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div ref={gridRef} className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.author}
-              className="group glass rounded-2xl p-8 hover:shadow-elevated transition-all duration-300 hover:-translate-y-2"
+              className={`group glass rounded-2xl p-8 hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 scroll-reveal-scale stagger-${index + 1} ${gridVisible ? 'visible' : ''}`}
             >
               {/* Quote icon */}
               <Quote className="w-10 h-10 text-primary/30 mb-4" />
