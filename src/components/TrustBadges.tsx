@@ -21,11 +21,23 @@ const TrustBadges = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-slate-50 via-blue-50/50 to-slate-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ 
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
+          backgroundSize: '32px 32px'
+        }} />
+        
+        {/* Floating gradient orbs */}
+        <div className="absolute top-20 left-[10%] w-72 h-72 bg-gradient-to-br from-primary/10 to-secondary/5 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]" />
+        <div className="absolute bottom-20 right-[10%] w-96 h-96 bg-gradient-to-br from-secondary/10 to-accent/5 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite_reverse]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/5 via-transparent to-transparent rounded-full" />
+        
+        {/* Decorative lines */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       </div>
 
       <div className="container px-4 md:px-8 relative z-10">
