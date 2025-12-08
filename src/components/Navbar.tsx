@@ -40,8 +40,10 @@ const Navbar = () => {
               <Phone className="w-4 h-4" />
               <span className="font-medium">(516)-523-0489</span>
             </a>
-            <Button variant="accent" size="default">
-              Apply Now
+            <Button variant="accent" size="default" asChild>
+              <a href="https://forms.zohopublic.com/skycapnow1/form/BusinessApplication/formperma/k4ySefBCGaIjXzTbs58TKi9KHTcjBurx7BVBYrs0buI" target="_blank" rel="noopener noreferrer">
+                Apply Now
+              </a>
             </Button>
           </div>
 
@@ -73,8 +75,10 @@ const Navbar = () => {
                 <Phone className="w-4 h-4" />
                 <span className="font-medium">(888) 555-FUND</span>
               </a>
-              <Button variant="accent" className="w-full mt-2">
-                Apply Now
+              <Button variant="accent" className="w-full mt-2" asChild>
+                <a href="https://forms.zohopublic.com/skycapnow1/form/BusinessApplication/formperma/k4ySefBCGaIjXzTbs58TKi9KHTcjBurx7BVBYrs0buI" target="_blank" rel="noopener noreferrer">
+                  Apply Now
+                </a>
               </Button>
             </div>
           </div>
