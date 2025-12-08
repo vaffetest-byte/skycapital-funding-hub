@@ -1,9 +1,12 @@
 # SkyCapital Robots.txt
-# Allow all search engines to crawl the site
+# Business Funding Provider - New York & Florida
 
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
 
 User-agent: Bingbot
 Allow: /
@@ -28,6 +31,9 @@ User-agent: facebookexternalhit
 Allow: /
 
 User-agent: LinkedInBot
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: *
