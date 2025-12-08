@@ -1,4 +1,5 @@
 import { FileEdit, FileSpreadsheet, CheckCircle2, Wallet } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const steps = [
   {
@@ -28,8 +29,11 @@ const steps = [
 ];
 
 const FundingProcess = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: stepsRef, isVisible: stepsVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section id="process" className="py-24 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
@@ -37,7 +41,10 @@ const FundingProcess = () => {
 
       <div className="container px-4 md:px-8 relative z-10">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 scroll-reveal ${headerVisible ? 'visible' : ''}`}
+        >
           <span className="inline-block px-4 py-2 bg-accent/20 text-accent-foreground rounded-full text-sm font-semibold mb-4">
             Simple Process
           </span>
@@ -50,12 +57,15 @@ const FundingProcess = () => {
         </div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div ref={stepsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {/* Connecting line */}
-          <div className="hidden lg:block absolute top-20 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary via-secondary to-accent" />
+          <div className={`hidden lg:block absolute top-20 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary via-secondary to-accent transition-all duration-1000 ${stepsVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`} style={{ transformOrigin: 'left' }} />
 
           {steps.map((step, index) => (
-            <div key={step.title} className="relative group">
+            <div 
+              key={step.title} 
+              className={`relative group scroll-reveal stagger-${index + 1} ${stepsVisible ? 'visible' : ''}`}
+            >
               {/* Step card */}
               <div className="text-center">
                 {/* Icon with step number */}

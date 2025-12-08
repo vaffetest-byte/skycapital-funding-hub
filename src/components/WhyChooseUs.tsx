@@ -1,4 +1,5 @@
 import { Check, Clock, Shield, Users, Percent, HeartHandshake } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const features = [
   {
@@ -34,12 +35,18 @@ const features = [
 ];
 
 const WhyChooseUs = () => {
+  const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation();
+  const { ref: rightRef, isVisible: rightVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section className="py-24 bg-muted/50">
+    <section id="why-us" className="py-24 bg-muted/50">
       <div className="container px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
-          <div>
+          <div 
+            ref={leftRef}
+            className={`scroll-reveal-left ${leftVisible ? 'visible' : ''}`}
+          >
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
               Why SkyCapital
             </span>
@@ -53,15 +60,15 @@ const WhyChooseUs = () => {
 
             {/* CTA stats */}
             <div className="flex gap-8">
-              <div>
+              <div className={`scroll-reveal stagger-1 ${leftVisible ? 'visible' : ''}`}>
                 <div className="text-4xl font-bold text-primary">$200M+</div>
                 <div className="text-sm text-muted-foreground">Total Funded</div>
               </div>
-              <div>
+              <div className={`scroll-reveal stagger-2 ${leftVisible ? 'visible' : ''}`}>
                 <div className="text-4xl font-bold text-primary">10K+</div>
                 <div className="text-sm text-muted-foreground">Clients Served</div>
               </div>
-              <div>
+              <div className={`scroll-reveal stagger-3 ${leftVisible ? 'visible' : ''}`}>
                 <div className="text-4xl font-bold text-primary">4.9</div>
                 <div className="text-sm text-muted-foreground">Star Rating</div>
               </div>
@@ -69,11 +76,11 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Right features grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div ref={rightRef} className="grid sm:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <div 
                 key={feature.title}
-                className="group bg-card rounded-xl p-6 shadow-soft hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border/50"
+                className={`group bg-card rounded-xl p-6 shadow-soft hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border/50 scroll-reveal-scale stagger-${index + 1} ${rightVisible ? 'visible' : ''}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
                   <feature.icon className="w-6 h-6 text-primary" />

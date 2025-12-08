@@ -9,6 +9,7 @@ import {
   Home, 
   TrendingUp 
 } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const products = [
   {
@@ -54,11 +55,17 @@ const products = [
 ];
 
 const ProductsGrid = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ threshold: 0.05 });
+
   return (
-    <section className="py-24 bg-background">
+    <section id="products" className="py-24 bg-background">
       <div className="container px-4 md:px-8">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 scroll-reveal ${headerVisible ? 'visible' : ''}`}
+        >
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
             Funding Solutions
           </span>
@@ -71,15 +78,19 @@ const ProductsGrid = () => {
         </div>
 
         {/* Products grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
-            <ProductCard
+            <div
               key={product.title}
-              icon={product.icon}
-              title={product.title}
-              description={product.description}
-              delay={index * 50}
-            />
+              className={`scroll-reveal-scale stagger-${index + 1} ${gridVisible ? 'visible' : ''}`}
+            >
+              <ProductCard
+                icon={product.icon}
+                title={product.title}
+                description={product.description}
+                delay={0}
+              />
+            </div>
           ))}
         </div>
       </div>
