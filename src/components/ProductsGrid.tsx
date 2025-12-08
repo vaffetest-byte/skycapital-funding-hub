@@ -15,49 +15,49 @@ const products = [
   {
     icon: Banknote,
     title: "Merchant Cash Advance (MCA)",
-    description: "Fast MCA funding for New York & Florida businesses. Get capital based on future sales with flexible repayment.",
+    description: "Fast MCA funding for businesses nationwide. Get capital based on future sales with flexible repayment.",
     featured: true
   },
   {
     icon: Building2,
     title: "Working Capital Loans",
-    description: "Working capital loans for NY & FL small businesses. Predictable payments for growth and operations.",
+    description: "Working capital loans for small businesses. Predictable payments for growth and operations.",
     featured: false
   },
   {
     icon: CreditCard,
     title: "Business Line of Credit",
-    description: "Flexible credit lines for New York and Florida businesses. Only pay interest on what you use.",
+    description: "Flexible credit lines for businesses across all 50 states. Only pay interest on what you use.",
     featured: false
   },
   {
     icon: Truck,
     title: "Equipment Financing",
-    description: "Equipment financing for NY & FL businesses. Upgrade machinery without draining cash reserves.",
+    description: "Equipment financing for your business. Upgrade machinery without draining cash reserves.",
     featured: false
   },
   {
     icon: FileText,
     title: "Invoice Factoring",
-    description: "Turn unpaid invoices into immediate working capital for your New York or Florida business.",
+    description: "Turn unpaid invoices into immediate working capital for your business.",
     featured: false
   },
   {
     icon: Rocket,
     title: "Startup Funding",
-    description: "Startup business loans for new ventures in NYC, Miami, and across NY & FL. Flexible terms available.",
+    description: "Startup business loans for new ventures nationwide. Flexible terms available.",
     featured: true
   },
   {
     icon: Home,
     title: "Real Estate Investor Funding",
-    description: "Fast real estate funding for NY & FL investors. Fix-and-flip, rental, or commercial properties.",
+    description: "Fast real estate funding for investors. Fix-and-flip, rental, or commercial properties.",
     featured: false
   },
   {
     icon: TrendingUp,
     title: "Revenue-Based Financing",
-    description: "Revenue-based funding for growing businesses in New York and Florida. Payments tied to your revenue.",
+    description: "Revenue-based funding for growing businesses. Payments tied to your revenue.",
     featured: false
   }
 ];
@@ -88,11 +88,11 @@ const ProductsGrid = () => {
             Business Funding Solutions
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Small Business Loans & MCA Funding for <span className="text-gradient">NY & Florida</span>
+            Small Business Loans & MCA Funding Nationwide
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             From <strong>merchant cash advance</strong> to <strong>working capital loans</strong>, we provide fast approval business funding 
-            for small businesses across <strong>New York</strong> and <strong>Florida</strong>. Get funded in 24-48 hours.
+            for small businesses across <strong>all 50 states</strong>. Get funded in 24-48 hours.
           </p>
         </div>
 
@@ -114,13 +114,6 @@ const ProductsGrid = () => {
           ))}
         </div>
 
-        {/* Local SEO - Service areas */}
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground text-sm">
-            Available in: <strong>NYC</strong>, <strong>Brooklyn</strong>, <strong>Manhattan</strong>, <strong>Queens</strong>, <strong>Long Island</strong>, <strong>Buffalo</strong>, <strong>Albany</strong>, 
-            <strong> Miami</strong>, <strong>Orlando</strong>, <strong>Tampa</strong>, <strong>Jacksonville</strong>, <strong>Fort Lauderdale</strong>, and all cities across New York & Florida
-          </p>
-        </div>
       </div>
     </section>
   );
