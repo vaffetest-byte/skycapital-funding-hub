@@ -43,7 +43,7 @@ const TrustBadges = () => {
       <div className="container px-4 md:px-8 relative z-10">
         {/* Section Header */}
         <div className={`text-center mb-12 scroll-reveal ${badgesVisible ? 'visible' : ''}`} ref={badgesRef}>
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-semibold text-primary mb-4">
+          <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary mb-4">
             <Sparkles className="w-4 h-4" />
             Why Trust Us
           </span>

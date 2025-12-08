@@ -5,7 +5,7 @@ const features = [
   {
     icon: Clock,
     title: "Fast Approvals",
-    description: "Same-day approval for NY & FL businesses. Get pre-approved in minutes with no lengthy waiting periods."
+    description: "Same-day approval for businesses nationwide. Get pre-approved in minutes with no lengthy waiting periods."
   },
   {
     icon: Shield,
@@ -15,7 +15,7 @@ const features = [
   {
     icon: Users,
     title: "Dedicated Specialists",
-    description: "Work with funding experts who understand New York and Florida business needs and industries."
+    description: "Work with funding experts who understand your business needs and industry requirements."
   },
   {
     icon: Percent,
@@ -25,12 +25,12 @@ const features = [
   {
     icon: HeartHandshake,
     title: "Flexible Repayment",
-    description: "Payment plans that adapt to your cash flow. We work with NY & FL businesses, not against them."
+    description: "Payment plans that adapt to your cash flow. We work with your business, not against it."
   },
   {
     icon: Check,
     title: "95% Approval Rate",
-    description: "High approval rate for qualified businesses in New York and Florida. We find ways to say yes."
+    description: "High approval rate for qualified businesses across all 50 states. We find ways to say yes."
   }
 ];
 
@@ -55,11 +55,11 @@ const WhyChooseUs = () => {
               Trusted Business Funding Provider
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Your Partner in{" "}
-              <span className="text-gradient">Business Growth</span>
+              We Help Businesses{" "}
+              <span className="text-gradient">Thrive & Succeed</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We&apos;ve funded over <strong>$200 Million</strong> to businesses across <strong>New York</strong> and <strong>Florida</strong>. 
+              We&apos;ve funded over <strong>$200 Million</strong> to businesses across all <strong>50 states</strong>. 
               Our streamlined process and expert team ensure you get the <strong>working capital</strong> and <strong>MCA funding</strong> you need, when you need it.
             </p>
 
@@ -67,7 +67,7 @@ const WhyChooseUs = () => {
             <div className="flex gap-8">
               <div className={`scroll-reveal stagger-1 ${leftVisible ? 'visible' : ''}`}>
                 <div className="text-4xl font-bold text-primary">$200M+</div>
-                <div className="text-sm text-muted-foreground">Funded to NY & FL</div>
+                <div className="text-sm text-muted-foreground">Funded Nationwide</div>
               </div>
               <div className={`scroll-reveal stagger-2 ${leftVisible ? 'visible' : ''}`}>
                 <div className="text-4xl font-bold text-primary">10K+</div>
