@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-4">
             <a href="tel:8885553863" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300">
               <Phone className="w-4 h-4" />
-              <span className="font-medium">(888) 555-FUND</span>
+              <span className="font-medium">(516)-523-0489</span>
             </a>
             <Button variant="accent" size="default">
               Apply Now
