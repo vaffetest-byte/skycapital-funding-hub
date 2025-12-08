@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Phone } from "lucide-react";
+import { ArrowRight, Shield, Phone, MapPin } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] gradient-hero overflow-hidden">
+    <section className="relative min-h-[90vh] gradient-hero overflow-hidden" aria-label="Business Funding New York and Florida Hero Section">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl animate-float" />
@@ -17,48 +17,58 @@ const Hero = () => {
       }} />
 
       <div className="container relative z-10 px-4 md:px-8 pt-32 pb-20">
-        {/* Trust badge */}
-        <div className="flex justify-center mb-8 animate-fade-up">
+        {/* Trust badge with location */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8 animate-fade-up">
           <div className="glass-dark px-4 py-2 rounded-full flex items-center gap-2">
-            <Shield className="w-4 h-4 text-accent" />
+            <Shield className="w-4 h-4 text-accent" aria-hidden="true" />
             <span className="text-sm text-white/90">Trusted by 10,000+ Businesses Nationwide</span>
+          </div>
+          <div className="glass-dark px-4 py-2 rounded-full flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-accent" aria-hidden="true" />
+            <span className="text-sm text-white/90">Serving New York & Florida</span>
           </div>
         </div>
 
-        {/* Main heading */}
+        {/* SEO-Optimized H1 - Primary keyword: Business Funding New York Florida */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white max-w-5xl mx-auto leading-tight animate-fade-up-delay-1">
-          Flexible Funding Solutions for{" "}
-          <span className="text-accent">Every Business Need</span>
+          Fast Business Funding in{" "}
+          <span className="text-accent">New York & Florida</span>
         </h1>
 
-        {/* Subtitle */}
+        {/* SEO Subtitle with keywords: MCA, working capital, small business loans */}
         <p className="mt-6 text-lg md:text-xl text-white/80 text-center max-w-3xl mx-auto animate-fade-up-delay-2">
-          SkyCapital provides fast, reliable, and tailored financing options to help businesses grow without limits. Get funded in as little as 24 hours.
+          SkyCapital provides <strong>MCA funding</strong>, <strong>working capital loans</strong>, and <strong>small business loans</strong> for NY & FL businesses. 
+          Get <strong>fast approval</strong> and funding in as little as 24 hours with a 95% approval rate.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 animate-fade-up-delay-3">
           <Button variant="hero" size="xl" asChild>
-            <a href="https://forms.zohopublic.com/skycapnow1/form/BusinessApplication/formperma/k4ySefBCGaIjXzTbs58TKi9KHTcjBurx7BVBYrs0buI" target="_blank" rel="noopener noreferrer">
-              Apply Now
-              <ArrowRight className="w-5 h-5" />
+            <a 
+              href="https://forms.zoho.com/skycapnow1/form/TimetoDriveYourBusinessForwardAreYouIn" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Apply now for fast business funding in New York and Florida"
+            >
+              Get Funded Today
+              <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </a>
           </Button>
           <Button variant="heroOutline" size="xl" asChild>
-            <a href="tel:5165230489">
-              <Phone className="w-5 h-5" />
+            <a href="tel:5165230489" aria-label="Call SkyCapital advisor for business funding">
+              <Phone className="w-5 h-5" aria-hidden="true" />
               Speak to a SkyCapital Advisor
             </a>
           </Button>
         </div>
 
-        {/* Stats */}
+        {/* Stats with SEO keywords */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 animate-fade-up-delay-3">
           {[
-            { value: "$200M", label: "Funded to Date" },
-            { value: "24hrs", label: "Average Funding Time" },
-            { value: "95%", label: "Approval Rate" },
-            { value: "10K+", label: "Happy Clients" },
+            { value: "$200M+", label: "Funded to NY & FL Businesses" },
+            { value: "24hrs", label: "Fast Approval Funding" },
+            { value: "95%", label: "Business Loan Approval Rate" },
+            { value: "10K+", label: "Happy Clients in NY & FL" },
           ].map((stat, index) => (
             <div key={index} className="text-center glass-dark rounded-2xl p-6">
               <div className="text-3xl md:text-4xl font-bold text-accent">{stat.value}</div>
@@ -66,11 +76,18 @@ const Hero = () => {
             </div>
           ))}
         </div>
+
+        {/* Local SEO - Service Areas */}
+        <div className="mt-12 text-center animate-fade-up-delay-3">
+          <p className="text-white/60 text-sm">
+            Proudly serving businesses in <strong className="text-white/80">NYC, Brooklyn, Manhattan, Queens, Long Island, Buffalo, Albany</strong> and <strong className="text-white/80">Miami, Orlando, Tampa, Jacksonville, Fort Lauderdale</strong>
+          </p>
+        </div>
       </div>
 
       {/* Bottom wave */}
       <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" aria-hidden="true">
           <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="hsl(210 40% 98%)"/>
         </svg>
       </div>
