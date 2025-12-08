@@ -10,8 +10,8 @@ const steps = [
   {
     icon: FileSpreadsheet,
     step: "02",
-    title: "Connect Your Business Details",
-    description: "Provide essential business details so we can verify and match you with the best funding options."
+    title: "Connect Your Business",
+    description: "Share your business details for quick verification and matching."
   },
   {
     icon: CheckCircle2,
