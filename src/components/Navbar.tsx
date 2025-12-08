@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import skycapitalLogo from "@/assets/skycapital-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +26,25 @@ const Navbar = () => {
     { label: "Testimonials", href: "#testimonials" },
   ];
 
+  const handleNavClick = (href: string) => {
+    if (location.pathname !== "/") {
+      // Navigate to home page first, then scroll to section
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
@@ -36,7 +58,7 @@ const Navbar = () => {
           isScrolled ? "h-24" : "h-36"
         }`}>
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src={skycapitalLogo} 
               alt="Sky Capital" 
@@ -44,18 +66,18 @@ const Navbar = () => {
                 isScrolled ? "h-32 md:h-40" : "h-48 md:h-56"
               }`}
             />
-          </a>
+          </Link>
 
           {/* Desktop navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.label}
-                href={link.href}
+                onClick={() => handleNavClick(link.href)}
                 className="text-white/80 hover:text-white transition-colors duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </div>
 
@@ -86,14 +108,16 @@ const Navbar = () => {
           <div className="lg:hidden py-6 border-t border-white/10">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.label}
-                  href={link.href}
-                  className="text-white/80 hover:text-white transition-colors duration-300 font-medium py-2"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    handleNavClick(link.href);
+                    setIsOpen(false);
+                  }}
+                  className="text-white/80 hover:text-white transition-colors duration-300 font-medium py-2 text-left"
                 >
                   {link.label}
-                </a>
+                </button>
               ))}
               <hr className="border-white/10 my-2" />
               <a href="tel:5165230489" className="flex items-center gap-2 text-white/80 py-2">
