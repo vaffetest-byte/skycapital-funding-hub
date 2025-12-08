@@ -35,7 +35,7 @@ const Footer = () => {
             <img 
               src={skycapitalLogo} 
               alt="Sky Capital" 
-              className="h-32 w-auto brightness-0 invert mb-4"
+              className="h-36 md:h-44 w-auto brightness-0 invert mb-4"
             />
             <p className="text-primary-foreground/70 mb-6">
               Empowering businesses with fast, flexible funding solutions since 2015.
