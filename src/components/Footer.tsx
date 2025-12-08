@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from "lucide-react";
+import skycapitalLogo from "@/assets/skycapital-logo.png";
 
 const Footer = () => {
   return (
@@ -31,7 +32,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company info */}
           <div className="lg:col-span-1">
-            <h4 className="text-2xl font-bold mb-4">SkyCapital</h4>
+            <img 
+              src={skycapitalLogo} 
+              alt="Sky Capital" 
+              className="h-12 w-auto brightness-0 invert mb-4"
+            />
             <p className="text-primary-foreground/70 mb-6">
               Empowering businesses with fast, flexible funding solutions since 2015.
             </p>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import skycapitalLogo from "@/assets/skycapital-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +18,12 @@ const Navbar = () => {
       <div className="container px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="text-2xl font-bold text-white">
-            Sky<span className="text-accent">Capital</span>
+          <a href="/" className="flex items-center">
+            <img 
+              src={skycapitalLogo} 
+              alt="Sky Capital" 
+              className="h-10 md:h-12 w-auto brightness-0 invert"
+            />
           </a>
 
           {/* Desktop navigation */}
