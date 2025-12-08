@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import skycapitalLogo from "@/assets/skycapital-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { label: "Funding Solutions", href: "#products" },
@@ -14,15 +24,25 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-dark border-b border-white/10">
+    <nav 
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
+        isScrolled 
+          ? "bg-primary/95 backdrop-blur-xl border-white/10 shadow-elevated" 
+          : "glass-dark border-white/10"
+      }`}
+    >
       <div className="container px-4 md:px-8">
-        <div className="flex items-center justify-between h-28">
+        <div className={`flex items-center justify-between transition-all duration-300 ${
+          isScrolled ? "h-20" : "h-28"
+        }`}>
           {/* Logo */}
           <a href="/" className="flex items-center">
             <img 
               src={skycapitalLogo} 
               alt="Sky Capital" 
-              className="h-36 md:h-44 w-auto brightness-0 invert"
+              className={`w-auto brightness-0 invert transition-all duration-300 ${
+                isScrolled ? "h-24 md:h-28" : "h-36 md:h-44"
+              }`}
             />
           </a>
 
@@ -32,7 +52,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-white/80 hover:text-white transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-white transition-colors duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
               >
                 {link.label}
               </a>
@@ -41,7 +61,7 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:8885553863" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300">
+            <a href="tel:5165230489" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300">
               <Phone className="w-4 h-4" />
               <span className="font-medium">(516)-523-0489</span>
             </a>
@@ -76,9 +96,9 @@ const Navbar = () => {
                 </a>
               ))}
               <hr className="border-white/10 my-2" />
-              <a href="tel:8885553863" className="flex items-center gap-2 text-white/80 py-2">
+              <a href="tel:5165230489" className="flex items-center gap-2 text-white/80 py-2">
                 <Phone className="w-4 h-4" />
-                <span className="font-medium">(888) 555-FUND</span>
+                <span className="font-medium">(516)-523-0489</span>
               </a>
               <Button variant="accent" className="w-full mt-2" asChild>
                 <a href="https://forms.zohopublic.com/skycapnow1/form/BusinessApplication/formperma/k4ySefBCGaIjXzTbs58TKi9KHTcjBurx7BVBYrs0buI" target="_blank" rel="noopener noreferrer">
