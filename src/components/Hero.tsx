@@ -31,8 +31,8 @@ const Hero = () => {
 
         {/* SEO-Optimized H1 - Primary keyword: Business Funding New York Florida */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white max-w-5xl mx-auto leading-tight animate-fade-up-delay-1">
-          Fast Business Funding in{" "}
-          <span className="text-accent">New York & Florida</span>
+          Get the Capital You Need to{" "}
+          <span className="text-accent">Grow Your Business</span>
         </h1>
 
         {/* SEO Subtitle with keywords: MCA, working capital, small business loans */}
