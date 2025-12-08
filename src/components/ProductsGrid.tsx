@@ -15,42 +15,50 @@ const products = [
   {
     icon: Banknote,
     title: "Merchant Cash Advance (MCA)",
-    description: "Get capital based on your future sales. Flexible repayment that adjusts with your revenue flow."
+    description: "Get capital based on your future sales. Flexible repayment that adjusts with your revenue flow.",
+    featured: true
   },
   {
     icon: Building2,
     title: "Business Term Loans",
-    description: "Traditional financing with predictable payments. Ideal for established businesses seeking growth capital."
+    description: "Traditional financing with predictable payments. Ideal for established businesses seeking growth capital.",
+    featured: false
   },
   {
     icon: CreditCard,
     title: "Line of Credit",
-    description: "Access funds when you need them. Only pay interest on what you use with revolving credit."
+    description: "Access funds when you need them. Only pay interest on what you use with revolving credit.",
+    featured: false
   },
   {
     icon: Truck,
     title: "Equipment Financing",
-    description: "Upgrade your business equipment without draining cash reserves. Competitive rates available."
+    description: "Upgrade your business equipment without draining cash reserves. Competitive rates available.",
+    featured: false
   },
   {
     icon: FileText,
     title: "Invoice Factoring",
-    description: "Turn unpaid invoices into immediate working capital. Improve cash flow without adding debt."
+    description: "Turn unpaid invoices into immediate working capital. Improve cash flow without adding debt.",
+    featured: false
   },
   {
     icon: Rocket,
     title: "Startup Funding",
-    description: "Launch your vision with capital designed for new ventures. Flexible terms for emerging businesses."
+    description: "Launch your vision with capital designed for new ventures. Flexible terms for emerging businesses.",
+    featured: true
   },
   {
     icon: Home,
     title: "Real Estate Investor Funding",
-    description: "Finance your property investments with speed. Fix-and-flip, rental, or commercial opportunities."
+    description: "Finance your property investments with speed. Fix-and-flip, rental, or commercial opportunities.",
+    featured: false
   },
   {
     icon: TrendingUp,
     title: "Revenue-Based Financing",
-    description: "Funding that grows with your business. Repayments tied to your monthly revenue performance."
+    description: "Funding that grows with your business. Repayments tied to your monthly revenue performance.",
+    featured: false
   }
 ];
 
@@ -59,8 +67,14 @@ const ProductsGrid = () => {
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ threshold: 0.05 });
 
   return (
-    <section id="products" className="py-24 bg-background">
-      <div className="container px-4 md:px-8">
+    <section id="products" className="py-24 bg-background relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container px-4 md:px-8 relative z-10">
         {/* Section header */}
         <div 
           ref={headerRef}
@@ -82,12 +96,13 @@ const ProductsGrid = () => {
           {products.map((product, index) => (
             <div
               key={product.title}
-              className={`scroll-reveal-scale stagger-${index + 1} ${gridVisible ? 'visible' : ''}`}
+              className={`scroll-reveal-scale stagger-${Math.min(index + 1, 8)} ${gridVisible ? 'visible' : ''}`}
             >
               <ProductCard
                 icon={product.icon}
                 title={product.title}
                 description={product.description}
+                featured={product.featured}
                 delay={0}
               />
             </div>
