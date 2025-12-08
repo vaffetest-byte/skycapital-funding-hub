@@ -16,13 +16,13 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-dark border-b border-white/10">
       <div className="container px-4 md:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <a href="/" className="flex items-center">
             <img 
               src={skycapitalLogo} 
               alt="Sky Capital" 
-              className="h-20 md:h-24 w-auto brightness-0 invert"
+              className="h-28 md:h-32 w-auto brightness-0 invert"
             />
           </a>
 
