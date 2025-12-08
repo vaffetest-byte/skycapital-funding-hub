@@ -1,4 +1,4 @@
-import { FileEdit, FileSpreadsheet, CheckCircle2, Wallet } from "lucide-react";
+import { FileEdit, CheckCircle2, Wallet } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const steps = [
@@ -9,20 +9,14 @@ const steps = [
     description: "Complete our simple 5-minute application for business funding. No paperwork hassles."
   },
   {
-    icon: FileSpreadsheet,
-    step: "02",
-    title: "Quick Verification",
-    description: "Share your business details for fast approval. We verify businesses same-day."
-  },
-  {
     icon: CheckCircle2,
-    step: "03",
+    step: "02",
     title: "Get Approved",
     description: "Receive multiple funding offers tailored to your business. 95% approval rate."
   },
   {
     icon: Wallet,
-    step: "04",
+    step: "03",
     title: "Receive Funds",
     description: "Get funded in 24-48 hours directly to your account. Fast business funding nationwide."
   }
@@ -53,7 +47,7 @@ const FundingProcess = () => {
             Fast Approval Process
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Get Fast Business Funding in 4 Easy Steps
+            Get Fast Business Funding in 3 Easy Steps
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our streamlined <strong>fast approval business funding</strong> process gets your business 
@@ -62,7 +56,7 @@ const FundingProcess = () => {
         </div>
 
         {/* Steps */}
-        <div ref={stepsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div ref={stepsRef} className="grid md:grid-cols-3 gap-8 relative">
           {/* Connecting line */}
           <div className={`hidden lg:block absolute top-20 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary via-secondary to-accent transition-all duration-1000 ${stepsVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`} style={{ transformOrigin: 'left' }} aria-hidden="true" />
 
