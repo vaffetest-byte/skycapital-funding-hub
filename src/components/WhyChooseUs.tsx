@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
             {/* CTA stats */}
             <div className="flex gap-8">
               <div>
-                <div className="text-4xl font-bold text-primary">$2B+</div>
+                <div className="text-4xl font-bold text-primary">$200M+</div>
                 <div className="text-sm text-muted-foreground">Total Funded</div>
               </div>
               <div>
