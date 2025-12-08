@@ -98,7 +98,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent" />
-                <span className="text-primary-foreground/70">support@skycapnow.com</span>
+                <span className="text-primary-foreground/70">Support@skycapnow.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0" />
