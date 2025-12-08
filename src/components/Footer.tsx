@@ -1,8 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import skycapitalLogo from "@/assets/skycapital-logo.png";
 
 const Footer = () => {
+  const companyLinks = [
+    { name: "About Us", href: "#" },
+    { name: "How It Works", href: "#" },
+    { name: "Blog", href: "/blog", isRoute: true },
+    { name: "Contact", href: "#" }
+  ];
+
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* CTA Section */}
@@ -78,18 +86,17 @@ const Footer = () => {
           <div>
             <h5 className="font-bold mb-4">Company</h5>
             <ul className="space-y-3">
-              {[
-                "About Us",
-                "How It Works",
-                "Blog",
-                "Careers",
-                "Partner Program",
-                "Contact"
-              ].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
-                    {item}
-                  </a>
+              {companyLinks.map((item) => (
+                <li key={item.name}>
+                  {item.isRoute ? (
+                    <Link to={item.href} className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <a href={item.href} className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
+                      {item.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
