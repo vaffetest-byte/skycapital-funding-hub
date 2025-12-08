@@ -18,14 +18,10 @@ const Hero = () => {
 
       <div className="container relative z-10 px-4 md:px-8 pt-32 pb-32">
         {/* Trust badge with location */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8 animate-fade-up">
+        <div className="flex justify-center items-center mb-8 animate-fade-up">
           <div className="glass-dark px-4 py-2 rounded-full flex items-center gap-2">
             <Shield className="w-4 h-4 text-accent" aria-hidden="true" />
             <span className="text-sm text-white/90">Trusted by 10,000+ Businesses Nationwide</span>
-          </div>
-          <div className="glass-dark px-4 py-2 rounded-full flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-accent" aria-hidden="true" />
-            <span className="text-sm text-white/90">Serving New York & Florida</span>
           </div>
         </div>
 
@@ -35,9 +31,9 @@ const Hero = () => {
           <span className="text-accent">Grow Your Business</span>
         </h1>
 
-        {/* SEO Subtitle with keywords: MCA, working capital, small business loans, NY & FL */}
+        {/* SEO Subtitle with keywords: MCA, working capital, small business loans */}
         <p className="mt-6 text-lg md:text-xl text-white/80 text-center max-w-3xl mx-auto animate-fade-up-delay-2">
-          <strong className="text-accent">New York & Florida's</strong> trusted source for <strong>MCA funding</strong>, <strong>working capital loans</strong>, and <strong>small business loans</strong>. 
+          Your trusted nationwide partner for <strong>MCA funding</strong>, <strong>working capital loans</strong>, and <strong>small business loans</strong>. 
           Get <strong>fast approval</strong> and funding in as little as 24 hours with a 95% approval rate.
         </p>
 
@@ -65,10 +61,10 @@ const Hero = () => {
         {/* Stats with SEO keywords */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 animate-fade-up-delay-3">
           {[
-            { value: "$200M+", label: "Funded to NY & FL Businesses" },
+            { value: "$200M+", label: "Funded Nationwide" },
             { value: "24hrs", label: "Fast Approval Funding" },
             { value: "95%", label: "Business Loan Approval Rate" },
-            { value: "10K+", label: "Happy Clients in NY & FL" },
+            { value: "10K+", label: "Happy Clients Served" },
           ].map((stat, index) => (
             <div key={index} className="text-center glass-dark rounded-2xl p-6">
               <div className="text-3xl md:text-4xl font-bold text-accent">{stat.value}</div>
@@ -77,12 +73,6 @@ const Hero = () => {
           ))}
         </div>
 
-        {/* Local SEO - Service Areas */}
-        <div className="mt-12 text-center animate-fade-up-delay-3">
-          <p className="text-white/60 text-sm">
-            Proudly serving businesses in <strong className="text-white/80">NYC, Brooklyn, Manhattan, Queens, Long Island, Buffalo, Albany</strong> and <strong className="text-white/80">Miami, Orlando, Tampa, Jacksonville, Fort Lauderdale</strong>
-          </p>
-        </div>
       </div>
 
       {/* Bottom wave */}
