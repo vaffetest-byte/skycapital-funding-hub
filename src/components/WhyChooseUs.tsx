@@ -55,8 +55,7 @@ const WhyChooseUs = () => {
               Trusted Business Funding Provider
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              We Help Businesses{" "}
-              <span className="text-gradient">Thrive & Succeed</span>
+              We Help Businesses Thrive & Succeed
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               We&apos;ve funded over <strong>$200 Million</strong> to businesses across all <strong>50 states</strong>. 
