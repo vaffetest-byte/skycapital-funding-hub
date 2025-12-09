@@ -41,7 +41,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 animate-fade-up-delay-3">
           <Button variant="hero" size="xl" asChild>
             <a 
-              href="https://forms.zoho.com/skycapnow1/form/BusinessApplication" 
+              href="https://forms.zohopublic.com/skycapnow1/form/BusinessApplication/formperma/k4ySefBCGaIjXzTbs58TKi9KHTcjBurx7BVBYrs0buI" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Apply now for fast business funding"
