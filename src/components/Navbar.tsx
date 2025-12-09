@@ -88,7 +88,7 @@ const Navbar = () => {
               <span className="font-medium">(516)-523-0489</span>
             </a>
             <Button variant="accent" size="default" className="animate-pulse-glow" asChild>
-              <a href="https://forms.zoho.com/skycapnow1/form/TimetoDriveYourBusinessForwardAreYouIn" target="_blank" rel="noopener noreferrer">
+              <a href="https://forms.zohopublic.com/skycapnow1/form/TimetoDriveYourBusinessForwardAreYouIn/formperma/n2L5-eBVJbTbpdVyxykY3VosikegBfB5UfccY72D5gA" target="_blank" rel="noopener noreferrer">
                 Begin Process
               </a>
             </Button>
@@ -125,7 +125,7 @@ const Navbar = () => {
                 <span className="font-medium">(516)-523-0489</span>
               </a>
               <Button variant="accent" className="w-full mt-2" asChild>
-                <a href="https://forms.zoho.com/skycapnow1/form/TimetoDriveYourBusinessForwardAreYouIn" target="_blank" rel="noopener noreferrer">
+                <a href="https://forms.zohopublic.com/skycapnow1/form/TimetoDriveYourBusinessForwardAreYouIn/formperma/n2L5-eBVJbTbpdVyxykY3VosikegBfB5UfccY72D5gA" target="_blank" rel="noopener noreferrer">
                   Begin Process
                 </a>
               </Button>
