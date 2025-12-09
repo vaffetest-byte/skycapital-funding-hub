@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
             <Button variant="accent" size="xl" asChild>
               <a 
-                href="https://forms.zoho.com/skycapnow1/form/TimetoDriveYourBusinessForwardAreYouIn" 
+                href="https://forms.zohopublic.com/skycapnow1/form/TimetoDriveYourBusinessForwardAreYouIn/formperma/n2L5-eBVJbTbpdVyxykY3VosikegBfB5UfccY72D5gA" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Apply for business funding"
